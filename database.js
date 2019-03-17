@@ -10,7 +10,7 @@ var WORLD_BOUNDS = {
 };
 
 var config = {
-  apiKey: config.the_key,
+  apiKey: "AIzaSyANUg5_izXIuY6hhdrUPWy9v4m_7SoJ5SY",
   authDomain: "hackrpi2019-41699.firebaseapp.com",
   databaseURL: "https://hackrpi2019-41699.firebaseio.com",
   projectId: "hackrpi2019-41699",
@@ -115,7 +115,7 @@ function submitForm() {
   if ($("#number").val().length === 10 && $("#twitter").val().length > 0) {
     writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
     $("#number").val('');
-    $("#twitter").val('');
+    $("#twitter").val('@');
     closeForm();
   }
 }
