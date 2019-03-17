@@ -10,7 +10,7 @@ var WORLD_BOUNDS = {
 };
 
 var config = {
-  apiKey: "AIzaSyANUg5_izXIuY6hhdrUPWy9v4m_7SoJ5SY",
+  apiKey: config.the_key,
   authDomain: "hackrpi2019-41699.firebaseapp.com",
   databaseURL: "https://hackrpi2019-41699.firebaseio.com",
   projectId: "hackrpi2019-41699",
