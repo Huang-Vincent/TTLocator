@@ -19,12 +19,8 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75,
-<<<<<<< HEAD
-    minZoom: 2,
-=======
     minZoom: 2.5,
     disableDoubleClickZoom: true
->>>>>>> d68a8ce7b9a6f0774f9d42fd85f549b5a9e47b5a
   });
 
 
@@ -64,10 +60,6 @@ function initMap() {
 
    }
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> d68a8ce7b9a6f0774f9d42fd85f549b5a9e47b5a
 }
 
 function placeMarker(location) {
