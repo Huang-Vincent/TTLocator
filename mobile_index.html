@@ -23,6 +23,20 @@
   <body>
     <div id="map"></div>
 
+    <div id="introModal" class="modal">
+      <div class="modal-content">
+        <span class="close1">&times;</span>
+        <center>
+        <h1 style="font-size:200%;">Welcome to #TrashTag</h1>
+        <p>Click anywhere on the map to start your own #TrashTag</p>
+        <p>Hover over any marker to see who tweeted #TrashTag</p>
+      <p  class='a'>  <img src = "red-dot.png"> Cleaned Area </p>
+      <p class='b'>  <img src = "yellow-dot.png" > Clean this Area </p>
+      <p  class='c'>  <img src = "blue-dot.png"> Clean Request </p>
+      </center>
+      </div>
+    </div>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -44,6 +58,17 @@
             <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <div id="confirmModal" class="modal">
+      <div class="modal-content">
+        <span class="close2">&times;</span>
+        <center>
+        <h1 style="font-size:200%;">You've been added!</h1><br>
+        <p>Your request will be shortly added to our database.</p>
+        <p>Reload the page to see your requested point.</p>
+      </center>
       </div>
     </div>
 
