@@ -92,11 +92,11 @@ function addMarkers() {
 function writeUserData(lat, long, number, twitter) {
   firebase.database().ref('Clients/'+twitter+'/Coordinates').set({
     Lat: lat,
-    Long: long,
+    Long: long
   });
 
   firebase.database().ref('Clients/'+twitter).update({
-    Number: number,
+    Number: number
   });
 }
 
