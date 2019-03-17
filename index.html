@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style type="text/css">
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
       #map {
         height: 100%;
       }
+      /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
@@ -14,11 +20,13 @@
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-    <script src = firebasemap.js></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ZxDD4j3d2heRl1bMt10Ni4xjvk9adAU
-        &libraries=visualization&callback=initMap">
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="trash.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyB8ZxDD4j3d2heRl1bMt10Ni4xjvk9adAU
+&callback=initMap"
+    async defer></script>
   </body>
 </html>
