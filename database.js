@@ -18,7 +18,8 @@ function initMap() {
   geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.828, lng: -98.579},
-    zoom: 3.75
+    zoom: 3.75,
+    minZoom: 2,
   });
 
   if(marker1) {
@@ -30,7 +31,7 @@ function initMap() {
   google.maps.event.addListener(map, 'click', function(event) {
    placeMarker(event.latLng);
   });
-  
+
 }
 
 function placeMarker(location) {
