@@ -26,11 +26,10 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75,
-    minZoom: 2.5,
     disableDoubleClickZoom: true,
     restriction: {
             latLngBounds: WORLD_BOUNDS,
-            strictBounds: false,
+            strictBounds: true
     },
   });
 
