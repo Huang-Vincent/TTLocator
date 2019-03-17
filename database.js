@@ -1,6 +1,12 @@
 var map;
 var geocoder;
 var marker1;
+var WORLD_BOUNDS = {
+  north: 85,
+  south: -85,
+  west: -180,
+  east: 180,
+};
 
 var config = {
   apiKey: "AIzaSyANUg5_izXIuY6hhdrUPWy9v4m_7SoJ5SY",
@@ -15,12 +21,17 @@ var database = firebase.database();
 var peopleRef = database.ref().child('MapPoints');
 
 function initMap() {
+  var bounds = new google.maps.LatLngBounds();
   geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75,
     minZoom: 2.5,
-    disableDoubleClickZoom: true
+    disableDoubleClickZoom: true,
+    restriction: {
+            latLngBounds: WORLD_BOUNDS,
+            strictBounds: false,
+    },
   });
 
 
