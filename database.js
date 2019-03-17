@@ -112,18 +112,10 @@ function closeForm() {
 }
 
 function submitForm() {
-  if ($("#number").val().length > 0 && $("#twitter").val().length > 0) {
+  if ($("#number").val().length === 10 && $("#twitter").val().length > 0) {
     writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
-    $( "div.popup" ).hide();
-    $( "#map" ).show();
     $("#number").val('');
     $("#twitter").val('');
-  } else if ($("#number").val().length > 0 && $("#twitter").val().length < 1) {
-    alert("Twitter field not filled.");
-  } else if ($("#number").val().length < 1 && $("#twitter").val().length > 0) {
-    alert("Phone Number field not filled.");
-  } else {
-    alert("Fields empty.");
   }
 }
 
