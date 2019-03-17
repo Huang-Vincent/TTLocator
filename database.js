@@ -147,6 +147,7 @@ function submitForm() {
     writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
     $("#number").val('');
     $("#twitter").val('@');
+    alert("Thank you! Your point will be added shortly.");
     closeForm();
   }
 }
@@ -163,11 +164,11 @@ span.onclick = function() {
 span1.onclick = function() {
   introModal.style.display = "none";
 }
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal || event.target == introModal) {
     modal.style.display = "none";
     introModal.style.display = "none";
-
   }
 }
