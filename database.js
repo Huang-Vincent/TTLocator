@@ -30,6 +30,7 @@ function initMap() {
     restriction: {
             latLngBounds: WORLD_BOUNDS,
             strictBounds: false,
+            strictBounds: true,
     },
   });
 
