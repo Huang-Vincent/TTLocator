@@ -20,6 +20,7 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 var peopleRef = database.ref().child('MapPoints');
+var clientRef = database.ref().child('Clients');
 var introModal = document.getElementById('introModal');
 
 function initIntro() {
@@ -93,6 +94,28 @@ function addMarkers() {
           title: results[0]
         });
         marker.setMap(map);
+    })
+  })
+
+  clientRef.once('value')
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var name = childSnapshot.key;
+      var results = [];
+      childSnapshot.forEach(function(anotherSnapshot) {
+        anotherSnapshot.forEach(function(oneMore) {
+          childData = oneMore.val();
+          results.push(childData);
+        })
+      })
+      var marker = new google.maps.Marker({
+        position: {lat: results[0], lng: results[1]},
+        title: name,
+        icon: {
+          url: "yellow-dot.png"
+        }
+      });
+      marker.setMap(map);
     })
   })
 }
