@@ -22,7 +22,16 @@
   </head>
   <body>
     <div id="map"></div>
-
+    <div id="introModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <center>
+        <h1 style="font-size:200%;">Welcome to #TrashTag</h1><br>
+        <p>Click anywhere on the map to start your own #TrashTag.</p>
+        <p>Hover over any marker to see who tweeted #TrashTag.</p>
+      </center>
+      </div>
+    </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -47,15 +56,11 @@
       </div>
     </div>
 
-
-
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
     <script src="database.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=
-AIzaSyB8ZxDD4j3d2heRl1bMt10Ni4xjvk9adAU
-&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ZxDD4j3d2heRl1bMt10Ni4xjvk9adAU&callback=initMap"
     async defer></script>
   </body>
 </html>

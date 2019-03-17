@@ -20,6 +20,15 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 var peopleRef = database.ref().child('MapPoints');
+var introModal = document.getElementById('introModal');
+
+function initIntro() {
+  introModal.style.display = "block";
+}
+
+window.onload = function() {
+  initIntro();
+};
 
 function initMap() {
   var bounds = new google.maps.LatLngBounds();
@@ -99,7 +108,6 @@ function writeUserData(lat, long, number, twitter) {
   });
 }
 var modal = document.getElementById('myModal');
-
 function openForm() {
   // document.getElementById("myForm").style.display = "block";
   // Get the modal
@@ -115,7 +123,8 @@ function submitForm() {
   if ($("#number").val().length === 10 && $("#twitter").val().length > 0) {
     writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
     $("#number").val('');
-    $("#twitter").val('');
+    $("#twitter").val('@');
+    closeForm();
   }
 }
 
@@ -125,11 +134,14 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  introModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == introModal) {
     modal.style.display = "none";
+    introModal.style.display = "none";
+
   }
 }
