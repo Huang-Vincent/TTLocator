@@ -18,6 +18,17 @@ function initMap() {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75
   });
+  google.maps.event.addListener(map, 'click', function(event) {
+   placeMarker(event.latLng);
+ });
+}
+
+function placeMarker(location) {
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        animation: google.maps.Animation.DROP
+    });
 }
 
 function codeAddress(i_title, address) {
