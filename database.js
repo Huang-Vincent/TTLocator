@@ -1,6 +1,6 @@
 var map;
 var geocoder;
-var marker;
+var marker1;
 
 var config = {
   apiKey: "AIzaSyANUg5_izXIuY6hhdrUPWy9v4m_7SoJ5SY",
@@ -20,16 +20,24 @@ function initMap() {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75
   });
+
+  if(marker1) {
+    marker1.addListener('click', function() {
+      infowindow.open(map, this);
+    });
+  }
+
   google.maps.event.addListener(map, 'click', function(event) {
    placeMarker(event.latLng);
- });
+  });
+  
 }
 
 function placeMarker(location) {
-  if (marker) {
-    marker.setPosition(location);
+  if (marker1) {
+    marker1.setPosition(location);
   } else {
-    marker = new google.maps.Marker({
+    marker1 = new google.maps.Marker({
       position: location,
       map: map,
       animation: google.maps.Animation.DROP,
