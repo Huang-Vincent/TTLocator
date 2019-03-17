@@ -1,5 +1,7 @@
 var map;
 var geocoder;
+var marker;
+
 var config = {
   apiKey: "AIzaSyANUg5_izXIuY6hhdrUPWy9v4m_7SoJ5SY",
   authDomain: "hackrpi2019-41699.firebaseapp.com",
@@ -23,13 +25,16 @@ function initMap() {
  });
 }
 
-//For the commit
 function placeMarker(location) {
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        animation: google.maps.Animation.DROP
+  if (marker) {
+    marker.setPosition(location);
+  } else {
+    marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      animation: google.maps.Animation.DROP,
     });
+  }
 }
 
 function codeAddress(i_title, address) {
@@ -39,7 +44,10 @@ function codeAddress(i_title, address) {
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            title: i_title
+            title: i_title,
+            icon: {
+              url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            }
         });
       }
     });
@@ -62,7 +70,10 @@ function addMarkers() {
       } else if (numElements == 3) {
         var marker = new google.maps.Marker({
           position: {lat: results[1], lng: results[2]},
-          title: results[0]
+          title: results[0],
+          icon: {
+            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+          }
         });
         marker.setMap(map);
       }
