@@ -23,6 +23,7 @@ function initMap() {
  });
 }
 
+//For the comit
 function placeMarker(location) {
     var marker = new google.maps.Marker({
         position: location,
