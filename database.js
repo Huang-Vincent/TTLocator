@@ -29,7 +29,7 @@ function initMap() {
     disableDoubleClickZoom: true,
     restriction: {
             latLngBounds: WORLD_BOUNDS,
-            strictBounds: false,
+            strictBounds: true,
     },
   });
 
