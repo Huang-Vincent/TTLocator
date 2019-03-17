@@ -114,5 +114,4 @@ function submitForm() {
   writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
   $( "div.popup" ).hide();
   $( "#map" ).show();
-
 }
