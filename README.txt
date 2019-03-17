@@ -1,3 +1,0 @@
-## Trashtag Locator
-test
-test
