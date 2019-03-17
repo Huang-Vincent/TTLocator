@@ -1,6 +1,7 @@
 var map;
 var geocoder;
 var marker1;
+var personLoc;
 var WORLD_BOUNDS = {
   north: 85,
   south: -85,
@@ -43,6 +44,7 @@ function initMap() {
      if (yesno) {
        $( "div.popup" ).show();
        $( "#map" ).hide();
+       personLoc = event.latLng;
      }
    }, 200);
   });
@@ -106,4 +108,11 @@ function closeForm() {
   $( "div.popup" ).hide();
   $( "#map" ).show();
   document.getElementById("myForm").style.display = "none";
+}
+
+function submitForm() {
+  writeUserData(personLoc.lat(), personLoc.lng(), $("#number").val(), $("#twitter").val());
+  $( "div.popup" ).hide();
+  $( "#map" ).show();
+
 }
