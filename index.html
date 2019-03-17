@@ -16,12 +16,25 @@
         padding: 0;
       }
     </style>
-  <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div id="map"></div>
-    
-    <div class="popup">Yellow</div>
+
+    <div class="popup", id="myForm">
+      <form class="form-container">
+        <h1>Login</h1>
+
+        <label for="number"><b>Phone Number</b></label>
+        <input type="tel" placeholder="Enter Phone Number" name="number" required>
+
+        <label for="twitter"><b>Twitter Handle</b></label>
+        <input type="password" placeholder="Enter Twitter Handle" name="twitter" required>
+
+        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  </form></div>
 
 
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>

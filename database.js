@@ -97,3 +97,13 @@ function writeUserData(lat, long, number, twitter) {
     Number: number,
   });
 }
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  $( "div.popup" ).hide();
+  $( "#map" ).show();
+  document.getElementById("myForm").style.display = "none";
+}
