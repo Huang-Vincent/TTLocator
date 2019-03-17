@@ -17,30 +17,36 @@
       }
     </style>
     <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div id="map"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="database.js"></script>
 
     <div class="popup" id="myForm" style="display:none">
       <form class="form-container" onSubmit="return false">
         <h1>Login</h1>
 
-        <label for="number"><b>Phone Number</b></label>
-        <input id="number" type="tel" placeholder="Enter Phone Number" name="number" required>
+        <div class="form-group">
+        <label><b>Twitter</b></label>
+        <input id="twitter" type="text" class="form-control" placeholder="Enter Twitter Username" name="twitter" required>
+        </div>
 
-        <label for="twitter"><b>Twitter Handle</b></label>
-        <input id="twitter" type="password" placeholder="Enter Twitter Handle" name="twitter" required>
+        <div class="form-group">
+        <label><b>Phone Number</b></label>
+        <input id="number" type="tel" class="form-control" placeholder="ie. 9998887777" name="number" required>
+        </div>
 
         <button type="submit" class="btn" onclick="submitForm()">Submit</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-  </form></div>
+      </form>
+    </div>
 
-
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
-    <script src="database.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=
 AIzaSyB8ZxDD4j3d2heRl1bMt10Ni4xjvk9adAU
 &callback=initMap"
