@@ -38,6 +38,17 @@
   color: white;
 }
 
+img.a {
+  vertical-align: baseline;
+}
+
+img.b {
+  vertical-align: text-top;
+}
+
+img.c {
+  vertical-align: text-bottom;
+}
 /* The Close Button */
 .close,
 .close1 {
@@ -71,4 +82,19 @@
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+#legend {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #888;
+}
+
+#legend h3 {
+  margin-top: 0;
+}
+
+#legend img {
+  vertical-align: middle;
 }
