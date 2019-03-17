@@ -29,14 +29,10 @@ function initMap() {
     disableDoubleClickZoom: true,
     restriction: {
             latLngBounds: WORLD_BOUNDS,
-            strictBounds: true
+            strictBounds: false,
     },
   });
 
-<<<<<<< HEAD
-  google.maps.event.addListener(map, 'click', function(event) {
-    placeMarker(event.latLng);
-=======
 
   addMarkers();
 
@@ -49,7 +45,6 @@ function initMap() {
        $( "#map" ).hide();
      }
    }, 200);
->>>>>>> 79e9ea9ca383cd9af193fe486016dfb4d7021cd3
   });
 }
 
@@ -67,10 +62,7 @@ function placeMarker(location) {
         url: "blue-dot.png"
       }
     });
-<<<<<<< HEAD
-=======
     marker1.setMap(map);
->>>>>>> 79e9ea9ca383cd9af193fe486016dfb4d7021cd3
   }
 }
 
@@ -95,11 +87,6 @@ function addMarkers() {
   })
 }
 
-<<<<<<< HEAD
-writeUserData(19.2059, -1.508, 1849285432, "@yestindee");
-
-=======
->>>>>>> 79e9ea9ca383cd9af193fe486016dfb4d7021cd3
 function writeUserData(lat, long, number, twitter) {
   firebase.database().ref('Clients/'+twitter+'/Coordinates').set({
     Lat: lat,
@@ -110,8 +97,3 @@ function writeUserData(lat, long, number, twitter) {
     Number: number,
   });
 }
-<<<<<<< HEAD
-
-addMarkers();
-=======
->>>>>>> 79e9ea9ca383cd9af193fe486016dfb4d7021cd3
