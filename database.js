@@ -46,7 +46,7 @@ function codeAddress(i_title, address) {
             position: results[0].geometry.location,
             title: i_title,
             icon: {
-              url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+              url: "blue-dot.png"
             }
         });
       }
@@ -72,7 +72,7 @@ function addMarkers() {
           position: {lat: results[1], lng: results[2]},
           title: results[0],
           icon: {
-            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            url: "blue-dot.png"
           }
         });
         marker.setMap(map);
