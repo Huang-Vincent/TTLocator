@@ -1,5 +1,4 @@
 var map;
-var geocoder;
 var marker1;
 var personLoc;
 var WORLD_BOUNDS = {
@@ -33,7 +32,6 @@ window.onload = function() {
 
 function initMap() {
   var bounds = new google.maps.LatLngBounds();
-  geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.828, lng: -98.579},
     zoom: 3.75,
